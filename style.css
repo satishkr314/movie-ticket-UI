@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Yellowtail&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body
+{
+    background-color: rgb(223, 19, 29);
+    color:black;
+    display:flex;
+    flex-direction: coloumn;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    font-family: 'Courier New', Courier, monospace;
+    margin:0;
+    font-size: 3rem;
+}
+@media only screen and (max-width: 700px) {
+    body {
+      font-size: 1rem;
+    }
+  }
+.movie-container{
+    margin:20px 0;
+}
+.movie-container select{
+    background-color: grey;
+    border:0;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+    padding:5px 15px 5px 15px;
+    /* -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none; */
+}
+.container{
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+.seat{
+    background-color: #444451;
+    height:12px;
+    width:15px;
+    margin:3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.row
+{
+    display:flex;
+    /* border:2px solid black; */
+    justify-content: space-between;
+}
+.seat.selected{
+    background-color: green;
+}
+.seat.occupied{
+    background-color: white;
+}
+.seat:nth-of-type(2){
+    margin-right: 18px;
+}
+.seat:nth-last-of-type(2)
+{
+    margin-left: 18px;
+}
+.seat:not(.occupied):hover{
+    cursor: pointer;
+    transform:scale(1.2) ;
+}
+.showcase .seat:not(.occupied):hover{
+    cursor: default;
+    transform:scale(1) ;
+}
+.showcase{
+    background-color:grey;
+    padding:5px 10px;
+    border-radius: 5px;
+    color:darkgray;
+    list-style-type: none;
+    box-shadow: 5px #888888;
+    justify-content: space-between;
+    display: flex;
+}
+.showcase li{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 10px;
+}
+.showcase li small
+{
+    margin-left: 2px;
+}
+.screen{
+    background-color: #fff;
+    height:70px;
+    width:100%;
+    margin:15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255,255,255,0.7);
+}
